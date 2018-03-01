@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>Kayla_and_Kyle</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
+</style>
+
+
+<!-- Sidebar/menu -->
+
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="WeddingHTML.html" style="width:33%" onclick="w3_close()" class="w3-bar-item w3-button">Home</a> 
+    <a href="WeddingGallery.html" style="width:25%" class="w3-bar-item w3-button">Gallery</a>
+    <a href="WeddingRSVP.html" style="width:33%" class="w3-bar-item w3-button w3-hover-black">RSVP</a>
+  </div>
+</div> 
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Kayla and Kyle</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" >
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-10" id="about">
+    <h4><b>About Kayla & Kyle</b></h4>
+    <img src="CloseUp.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4>Their Story</h4>
+      <p>Kayla and Kyle met each other working at 54th Street Grill & Bar. Little did they know it was love at first sight. Kyle, flustered with joy and anticipation, asked Kayla out on a surprise date.
+	  Kayla agreed to go out to dinner, because who turns down free food, and off they went on their first adventure! Kyle surprised Kayla by taking her to Dave & Busters where they could have hands on fun.
+	  After dinner Kayla and Kyle strolled off together to the arcade, where Kayla destroyed Kyle in Guitar Hero but Kyle made it up on the Jurassic Park shooter. Finally the two spent the last of their quarters on
+	  Deal or no deal. Kyle, being the gentleman that he is, let Kayla choose the case and the game flashed, buzzed, and whistled as all the other cases opened. One case after another the Banker called and offered more and more and on the last two cases
+	  the two lovers decided no deal and keep their case. Suddenly the game lit up and announced CONGRATULATION as they had chosen the million dollar case. Kyle knew at this moment he had chosen the million dollar girl. After returning home and saying their goodbyes
+	   Kyle had a plan to steal a kiss from Kayla. He told her to close her eyes and hold out her hands, no peeking, as he grabbed her hands tight he leaned in for the kiss that would spark their new lives together. 
+	   The rest is history but rumor has it the two lived on happily ever after, until Kayla gets hangry.
+      </p>
+      <p>mail: Kylepeniston@gmail.com</p>
+      <p>tel: 314.218.0739</p>
+	  <br>
+      <hr class="w3-opacity">
+ 
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
